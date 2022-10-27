@@ -22,6 +22,18 @@ yarn add axios
 yarn add styled-components
 ```
 
+- 로딩 스피너(react-spinners)
+
+```bash
+yarn add react-spinners
+```
+
+- 서치 아이콘(react-icons)
+
+```bash
+yarn add react-icons
+```
+
 - 리액트 인터섹션 옵저버(무한스크롤 기능 구현)
 
 ```bash
@@ -38,4 +50,38 @@ yarn add react-intersection-observer
 
 ```bash
 yarn add react-router-dom
+```
+
+### 😎폴더구조
+
+```
+react-testing-project
+│
+├─ src
+│  ├─ App.css
+│  ├─ App.js
+│  ├─ components
+│  │  ├─ Error.js
+│  │  ├─ Header.js
+│  │  ├─ InfiniteList.js
+│  │  ├─ Item.js
+│  │  ├─ NomoreContent.js
+│  │  ├─ SearchList.js
+│  │  └─ Spinner.js
+│  ├─ index.css
+│  ├─ index.js
+│  ├─ pages
+│  │  ├─ ItemDetailPage.js
+│  │  └─ MainPage.js
+│  ├─ shared
+│  │  ├─ api.js
+│  │  ├─ axios.js
+│  │  ├─ global_variables.js
+│  │  └─ useDebounce.js
+│  ├─ styles
+│  │  └─ reset.css
+│  └─ views
+│     ├─ VList.js
+│     └─ VSearchInput.js
+
 ```
