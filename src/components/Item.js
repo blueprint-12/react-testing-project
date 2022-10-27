@@ -1,8 +1,30 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+function Item({ createdAt, title, content, type, id }) {
+  return (
+    <ItemContainer>
+      <Link
+        to={`/a?id=${id}`}
+        style={{ color: "inherit", textDecoration: "inherit" }}
+      >
+        <div id="info">
+          <Title>
+            <span>{id}.&nbsp;</span>
+            {title}
+          </Title>
+          <Content className="content">{content}</Content>
+        </div>
+      </Link>
+    </ItemContainer>
+  );
+}
+
+export default React.memo(Item);
+
 const ItemContainer = styled.li`
+  box-sizing: border-box;
   width: 90%;
   padding: 20px;
   margin: 10px;
@@ -32,28 +54,3 @@ const Content = styled.p`
   line-height: 1.2em;
   height: 3.6em;
 `;
-
-function Item({ createdAt, title, content, type, id }) {
-  useEffect(() => {
-    console.log(`${id}번째 친구가 렌더링되었습니다.`);
-  });
-
-  return (
-    <ItemContainer>
-      <Link
-        to={`/a?id=${id}`}
-        style={{ color: "inherit", textDecoration: "inherit" }}
-      >
-        <div id="info">
-          <Title>
-            <span>{id}.&nbsp;</span>
-            {title}
-          </Title>
-          <Content className="content">{content}</Content>
-        </div>
-      </Link>
-    </ItemContainer>
-  );
-}
-
-export default React.memo(Item);
