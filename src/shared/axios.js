@@ -1,6 +1,6 @@
 import axios from "axios";
-import * as gval from "./global_variables";
+import * as gvar from "./global_variables";
 
 export const api = axios.create({
-  baseURL: gval.BASE_URL,
+  baseURL: gvar.BASE_URL,
 });
