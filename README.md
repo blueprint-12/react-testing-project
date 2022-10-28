@@ -52,37 +52,6 @@ yarn add react-intersection-observer
 ```bash
 yarn add react-router-dom
 ```
+## ❌트러블 슈팅
 
-### 😎폴더구조
-
-```
-react-testing-project
-│
-├─ src
-│  ├─ App.css
-│  ├─ App.js
-│  ├─ components
-│  │  ├─ Error.js
-│  │  ├─ Header.js
-│  │  ├─ InfiniteList.js
-│  │  ├─ Item.js
-│  │  ├─ NomoreContent.js
-│  │  ├─ SearchList.js
-│  │  └─ Spinner.js
-│  ├─ index.css
-│  ├─ index.js
-│  ├─ pages
-│  │  ├─ ItemDetailPage.js
-│  │  └─ MainPage.js
-│  ├─ shared
-│  │  ├─ api.js
-│  │  ├─ axios.js
-│  │  ├─ global_variables.js
-│  │  └─ useDebounce.js
-│  ├─ styles
-│  │  └─ reset.css
-│  └─ views
-│     ├─ VList.js
-│     └─ VSearchInput.js
-
-```
+[리액트 쿼리를 사용한 무한 스크롤 기능 관련 이슈 정리](https://blueprint-12.tistory.com/268)
