@@ -1,10 +1,11 @@
 ## 필수 구현사항
 
-    1. 게시물 무한 스크롤
-    2. 검색바 UI 구현
-    3. 게시물 리스트 구현
-    4. 게시물 상세 페이지
-    5. (선택) 검색어 debounce 적용
+    1. 게시물 무한 스크롤 ✅
+    2. 검색바 UI 구현 ✅
+    3. 게시물 리스트 구현 ✅
+    4. 게시물 상세 페이지 ✅
+    ---------only for A List-------
+    5. (선택) 검색어 debounce 적용 ✅
     6. (선택) 탭 UI 구현(A,B 섹션 구분)
     7. (선택) 게시물 상세페이지에서 뒤로가기 버튼을 눌러도 기존의 검색 내용, 탭 상태, 게시물 리스트 불러오기
 
@@ -22,19 +23,19 @@ yarn add axios
 yarn add styled-components
 ```
 
-- 로딩 스피너(react-spinners)
+- react-spinners(로딩 스피너)
 
 ```bash
 yarn add react-spinners
 ```
 
-- 서치 아이콘(react-icons)
+- react-icons(서치 아이콘)
 
 ```bash
 yarn add react-icons
 ```
 
-- 리액트 인터섹션 옵저버(무한스크롤 기능 구현)
+- 리액트 인터섹션 옵저버(무한스크롤 기능)
 
 ```bash
 yarn add react-intersection-observer
