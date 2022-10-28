@@ -10,13 +10,10 @@ function ItemDetailPage() {
   const navigate = useNavigate();
   const query_id = searchParams.get("id");
 
-  const { data, isLoading } = useItemDetailInfo(query_id);
-  console.log(data);
-  if (isLoading) {
-    return <Header />;
-  }
+  const { data } = useItemDetailInfo(query_id);
 
   const { title, content, id } = data;
+
   return (
     <Container>
       <Header />
