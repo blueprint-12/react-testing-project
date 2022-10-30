@@ -19,6 +19,13 @@ function MainPage() {
     setWord(e.target.value);
   };
 
+  //단어 유효성 검사는 어떻게 하는 게 좋을까.
+  /*
+  const validateSearchWord = (word) => {
+    return !word === null && word === "" ? true : false;
+  };
+  */
+
   let searchWord = useDebounce(word);
 
   const onClickContainer = () => {

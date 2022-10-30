@@ -21,7 +21,6 @@ function InfiniteList() {
     if (inView) fetchNextPage();
   }, [inView]);
 
-  //데이터가져오는 과정에서 에러가 발생했을 때,
   if (status === "error") return <Error>서버 에러</Error>;
 
   return (
