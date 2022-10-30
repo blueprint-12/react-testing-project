@@ -1,5 +1,5 @@
 import * as gvar from "./global_variables";
-import { api } from "./axios";
+import api from "./axios";
 import { useQuery, useInfiniteQuery } from "react-query";
 
 // A포스트 가져오기
@@ -29,7 +29,10 @@ const getSearchPost = async (word, pageParam) => {
   const res = await api.get(
     `/recruit/${gvar.MY_TOKEN}/a-posts?page=${pageParam || 0}&search=${
       word || ""
-    }`
+    }`,
+    {
+      enabled: word !== "",
+    }
   );
   const searchResult = res.data;
 
