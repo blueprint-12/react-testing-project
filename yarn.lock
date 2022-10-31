@@ -3324,6 +3324,11 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
+create-next-app@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/create-next-app/-/create-next-app-13.0.0.tgz#64067b889a0e53bc9998f553bf949330893a9a3f"
+  integrity sha512-9YrKoisDW2fIm2QOo43UfvakazFEhz8gOYr/dlSnIPtVB9O66ABH+CXWwFmGcaqTa54PBh6HtOFImsD1tT8lew==
+
 cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"

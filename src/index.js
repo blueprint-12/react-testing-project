@@ -16,6 +16,8 @@ const queryClient = new QueryClient({
   },
 });
 
+//devtools 사용안할 시 false로 끄기
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.Suspense fallback={<Spinner />}>
