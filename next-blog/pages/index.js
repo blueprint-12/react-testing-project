@@ -6,13 +6,30 @@ import axios from "axios";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  const jsonPlaceHolderData = await axios.get(
-    "https://jsonplaceholder.typicode.com/posts"
-  );
-  const result = jsonPlaceHolderData.data;
-  return {
-    props: { result },
-  };
+
+  console.log(allPostsData);
+  try {
+    const jsonPlaceHolderData = await axios.get(
+      "https://jsonplaceholder.typicode.com/posts"
+    );
+
+    //받아온 데이터 배열을 10개까지만 끊어서 사용
+
+    const result = jsonPlaceHolderData.data.slice(0, 10);
+
+    return {
+      props: { result },
+    };
+  } catch (error) {
+    console.log(error.response.status, error.response.statusText);
+
+    //응 에러나면 기본값줄거야
+    return {
+      props: {
+        result: [{ id: "id 404", title: "title 404", body: "body 404" }],
+      },
+    };
+  }
 }
 
 // export async function getStaticPaths() {
