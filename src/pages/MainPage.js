@@ -26,7 +26,8 @@ function MainPage() {
   };
   */
 
-  let searchWord = useDebounce(word);
+  //useDebounce(단어, 딜레이 시간)
+  let searchWord = useDebounce(word, 1000);
 
   const onClickContainer = () => {
     inputRef.current.focus();
