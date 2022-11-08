@@ -2,14 +2,54 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-//fs는 Node.js의 파일시스템 모듈로 파일을 읽어주는 역할
-//path 노드 모듈로 파일 경로를 조작할 수 있게 해줌
-//matter 각 마크다운 파일의 메타데이터를 구문 분석할 수 있는 라이브러리
-//Next.js에서 lib 폴더에는 할당된 이름(e.g. pages폴더)이 없으므로 아무렇게나 정해주면된다.
-//보통 폴더명은 lib 혹은 utils 로 짓는 것이 관례입니다.
+//✅2022 11 07 이슈 발생 fs 모듈은 node 모듈이라 서버 사이드 메소드 내부에서
+//모듈을 임포트해서 사용하는 것이 아니라면, 해당 모듈을 쓸 수 없다는 에러 메세지를 보낸다.
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
+export function getPostData(id) {
+  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+
+  // Use gray-matter to parse the post metadata section
+  const matterResult = matter(fileContents);
+
+  // Combine the data with the id
+  return {
+    id,
+    ...matterResult.data,
+  };
+}
+
+export function getAllPostIds() {
+  const fileNames = fs.readdirSync(postsDirectory);
+
+  //파일 이름들을 리스트로 반환(.md 제외)
+  //반환된 목록은 단순한 문자열 배열이 아니라 아래와 같은 모양의 객체 배열이어야 합니다.
+  //각 객체에는 키가 있어야 하고 params 키가 있는 객체를 포함해야 합니다.
+  // [id]를 사용하기 때문입니다. 그렇지 않으면 getStaticPaths는 실패합니다.
+
+  // Returns an array that looks like this:
+  // [
+  //   {
+  //     params: {
+  //       id: 'ssg-ssr'
+  //     }
+  //   },
+  //   {
+  //     params: {
+  //       id: 'pre-rendering'
+  //     }
+  //   }
+  // ]
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, ""),
+      },
+    };
+  });
+}
 export function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
