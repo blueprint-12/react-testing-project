@@ -1,10 +1,31 @@
-## **📚사용 패키지**
+# 📚사용 패키지
+
+- next 12.2.2
+- react 18.2.0
+
+## 업데이트
+
+**DATE**: <i>2022 11 11</i>
+
+> 로티 애니메이션 적용, 다크 모드 설정
+
+- next-themes 0.2.1 (for dark theme)
+- react-lottie-player 1.5.0 (로티파일(.json) 리액트에 적용)
+
+---
+
+**DATE**: <i>2022 11 10</i>
+
+> 테일윈드CSS 세팅을 위한 라이브러리 설치
 
 - tailwindcss v3.2.2
 - autoprefixer v10.4.13
 - postcss v8.4.18
 
-**테일윈드 설정**  
+# 설정
+
+### ✅ **테일윈드**
+
 (config 파일은 항상 root에)
 
 ```bash
@@ -46,7 +67,11 @@ module.exports = {
 };
 ```
 
-> 테일윈드 관련 확장 플러그인 설치( vscodee exntensions)
+> **TIP** 테일윈드 관련 확장 플러그인 설치( vscodee exntensions)
 
 1. "tailwind css intelisense" 추가
 2. "tailwind css highlught" 추가 (세팅에서 borderRadius 0.25rem(defualt) -> 0 으로 변경)
+
+# Next rules
+
+- 이미지 리소스(e.g. 파비콘, 로티 파일)->public폴더
