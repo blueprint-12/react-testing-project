@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, {siteTitle} from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
+import {getSortedPostsData} from "../lib/posts";
 import axios from "axios";
 
 export async function getStaticProps() {
@@ -15,10 +15,10 @@ export async function getStaticProps() {
 
     //받아온 데이터 배열을 10개까지만 끊어서 사용
 
-    const result = jsonPlaceHolderData.data.slice(0, 10);
-
+    const result = await jsonPlaceHolderData.data.slice(0, 10);
+    console.log(result);
     return {
-      props: { result },
+      props: {result},
     };
   } catch (error) {
     console.log(error.response.status, error.response.statusText);
@@ -26,7 +26,7 @@ export async function getStaticProps() {
     //응 에러나면 기본값줄거야
     return {
       props: {
-        result: [{ id: "id 404", title: "title 404", body: "body 404" }],
+        result: [{id: "id 404", title: "title 404", body: "body 404"}],
       },
     };
   }
@@ -58,7 +58,7 @@ export async function getStaticProps() {
 //   //렌더링될 애
 // }
 
-export default function Home({ result }) {
+export default function Home({result}) {
   return (
     <Layout home>
       <Head>
@@ -74,7 +74,7 @@ export default function Home({ result }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>▼Blog Contents▼</h2>
         <ul className={utilStyles.list}>
-          {result.map(({ id, title, body }) => (
+          {result.map(({id, title, body}) => (
             <li className={utilStyles.listItem} key={id}>
               Title : <b>{title}</b>
               <br />
