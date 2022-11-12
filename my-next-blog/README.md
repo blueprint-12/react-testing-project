@@ -5,6 +5,13 @@
 
 ## 업데이트
 
+**DATE**: <i>2022 11 12</i>
+
+> env.local 에서 변수 가져오기용
+> ❌주의: env 값은 원래 브라우저에서 undefined이니 확인을 하고싶다면 서버사이드에서 확인
+
+- dotenv 16.0.3
+
 **DATE**: <i>2022 11 11</i>
 
 > 로티 애니메이션 적용, 다크 모드 설정
@@ -23,6 +30,18 @@
 - postcss v8.4.18
 
 # 설정
+
+### ✅ **notion API**
+
+- 생성한 데이터베이스를 전체화면으로 열기(open as full page) 한 다음에 나오는 url의 아이디값을 넣어줘야 한다.
+  > ?물음표 뒤에 붙은 쿼리값은 get요청을 보낼 때, 오류를 발생시키므로 그 앞의 값만 사용
+- notion API 2022 06 28 버전 사용
+
+  > 우측 최상단의 메뉴(...)버튼을 눌러 내가 생성한 connection을 추가한다.
+
+- data list를 가져올 때는 POST로 요청하며, 헤더에 Content-Type/Notion-Version/Accept를 추가 설정해줘야 한다. 물론, auth에 Bearer Token값도 넣어줘야 한다.
+  > 데이터를 sorting(정렬)할 수 있는데 body에 json 형식으로 넘겨주면 된다. 이 코드는 노션dev API 공홈에 있다.
+  > [Notion dev sorting](https://developers.notion.com/reference/post-database-query-sort)
 
 ### ✅ **테일윈드**
 
