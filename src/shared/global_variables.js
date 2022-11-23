@@ -1,2 +1,2 @@
-export const MY_TOKEN = 747392;
-export const BASE_URL = "https://recruit-api.yonple.com";
+export const MY_TOKEN = process.env.REACT_APP_TOKEN;
+export const BASE_URL = process.env.REACT_APP_BASE_URL;
