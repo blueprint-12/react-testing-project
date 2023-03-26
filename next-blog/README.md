@@ -1,5 +1,6 @@
 ## next-blog(next.js 테스팅 폴더)
-
+> next.js를 활용해보는 테스팅 폴더입니다.
+> 
 ### how to start?
 
 - 이미 패키지 매니저가 설치되어 있다는 것을 전제로 함(저는 npm 말고 yarn을 사용했습니다.)
