@@ -1,3 +1,5 @@
+> tailwind CSS, NextJS, notion api를 활용한 블로그
+
 # 📚사용 패키지
 
 - next 12.2.2
