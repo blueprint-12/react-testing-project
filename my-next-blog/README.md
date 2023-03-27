@@ -4,6 +4,8 @@
 
 - next 12.2.2
 - react 18.2.0
+- dotenv 16.0.3 (로컬 환경 변수 관리용)
+- tailwindcss 3.2.2
 
 ## 업데이트
 
