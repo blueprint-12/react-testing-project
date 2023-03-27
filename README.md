@@ -1,11 +1,18 @@
-## 현재 폴더
+### 하위 폴더 설명
+1. **my-next-blog** `nextJS + tailwindCSS + notion API 를 활용한 블로그 사이트`
+
+2. **next-blog** `nextJS 공식문서 기반의 테스팅 폴더, 개념 숙지용`
+
+## react-testing-project
 > 검색 결과를 기준으로 서버 데이터를 가져와 무한 스크롤을 구현했습니다.
+
 **기간**: 10월 24 ~ 30일, 2022
 
 [1. 실행 방법](#실행-방법)  
 [2. 구현 사항](#구현-사항)  
-[3. 설치 패키지](#설치-패키지)  
-[4. 트러블 슈팅](#트러블-슈팅)
+[3. 설치 패키지 및 사용 스택](#설치-패키지)  
+[4. 트러블 슈팅](#트러블-슈팅)  
+
 
 ### 실행 방법
 ```bash
@@ -25,6 +32,8 @@ yarn && yarn start
 
 
 ### 설치 패키지
+
+📌사용 스택: `react-query(상태 관리)`, `JavaScript`, `styled-components(CSS in JS)`, `axios(HTTP)`, `react-router-dom(v6)`
 
 - axios(http 통신)
 
@@ -70,5 +79,6 @@ yarn add react-router-dom
 ### 트러블 슈팅
 
 [리액트 쿼리를 사용한 무한 스크롤 기능 관련 이슈 정리](https://blueprint-12.tistory.com/268)
+
 
 
