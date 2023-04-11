@@ -1,9 +1,13 @@
+# my-next-blog
 > tailwind CSS, NextJS, notion api를 활용한 블로그
 
+**기간**: 11월 8 ~ 13일, 2022
 # 📚사용 패키지
 
 - next 12.2.2
 - react 18.2.0
+- dotenv 16.0.3 (로컬 환경 변수 관리용)
+- tailwindcss 3.2.2
 
 ## 업데이트
 
@@ -30,7 +34,7 @@
 - autoprefixer v10.4.13
 - postcss v8.4.18
 
-# 설정
+# 설정 관련 정보
 
 ### ✅ **notion API**
 
