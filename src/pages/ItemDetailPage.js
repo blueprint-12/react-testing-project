@@ -6,7 +6,7 @@ import { useItemDetailInfo } from "../shared/api";
 import Header from "../components/Header";
 
 function ItemDetailPage() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const query_id = searchParams.get("id");
 
