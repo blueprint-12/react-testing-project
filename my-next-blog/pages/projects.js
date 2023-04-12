@@ -39,7 +39,6 @@ export async function getStaticProps() {
 //className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:w-full"
 //코드설명: md:에 걸렸을 때 grid의 컬럼을 2개로 요소 사이의 갭은 8이고 가장 작아졌을 때 width값은 full로
 export default function Projects({ projects }) {
-  console.log(projects);
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center px-6 mb-10">
@@ -50,7 +49,7 @@ export default function Projects({ projects }) {
         </Head>
         <h1 className="text-4xl font-bold sm:text-6xl">
           총 프로젝트 :
-          <span className="pl-4 text-blue-500">{projects.results.length}</span>
+          <span className="pl-4 text-blue-500">{projects?.results.length}</span>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 m-6 py-10">
           {projects &&
