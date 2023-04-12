@@ -63,3 +63,7 @@ export default function Projects({ projects }) {
     </Layout>
   );
 }
+
+Projects.defaultProps = {
+  results: [],
+};
