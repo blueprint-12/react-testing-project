@@ -1,5 +1,3 @@
 {
-  "root": true,
-  "extends": ["next/babel", "next/core-web-vitals"],
-  "rules": { "react-hooks/rules-of-hooks": "error" }
+  "extends": ["next"]
 }
