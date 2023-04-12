@@ -31,15 +31,14 @@ export async function getStaticProps() {
   );
   const projects = await res.json();
 
-  if (res.ok)
-    return {
-      props: { projects },
-    };
+  return {
+    props: { projects },
+  };
 }
 
 //className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:w-full"
 //코드설명: md:에 걸렸을 때 grid의 컬럼을 2개로 요소 사이의 갭은 8이고 가장 작아졌을 때 width값은 full로
-export default function Projects({ projects }) {
+export default function Projects(props) {
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center px-6 mb-10">
@@ -51,12 +50,12 @@ export default function Projects({ projects }) {
         <h1 className="text-4xl font-bold sm:text-6xl">
           총 프로젝트 :
           <span className="pl-4 text-blue-500">
-            {projects && projects.results.length}
+            {props.projects.results.length}
           </span>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 m-6 py-10">
-          {projects &&
-            projects.results.map((aProject) => (
+          {props &&
+            props.projects.results.map((aProject) => (
               <ProjectItem key={aProject.id} data={aProject} />
             ))}
         </div>
@@ -64,7 +63,3 @@ export default function Projects({ projects }) {
     </Layout>
   );
 }
-
-Projects.defaultProps = {
-  results: [],
-};
