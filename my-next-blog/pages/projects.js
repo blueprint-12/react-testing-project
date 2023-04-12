@@ -30,9 +30,6 @@ export async function getStaticProps() {
     options
   );
   const projects = await res.json();
-  const projectsNames = projects.results.map(
-    (aProject) => aProject.properties.Name.title[0].plain_text
-  );
 
   return {
     props: { projects },
@@ -56,9 +53,10 @@ export default function Projects({ projects }) {
           <span className="pl-4 text-blue-500">{projects.results.length}</span>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 m-6 py-10">
-          {projects.results.map((aProject) => (
-            <ProjectItem key={aProject.id} data={aProject} />
-          ))}
+          {projects &&
+            projects.results.map((aProject) => (
+              <ProjectItem key={aProject.id} data={aProject} />
+            ))}
         </div>
       </div>
     </Layout>
