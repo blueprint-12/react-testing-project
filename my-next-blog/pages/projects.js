@@ -31,9 +31,10 @@ export async function getStaticProps() {
   );
   const projects = await res.json();
 
-  return {
-    props: { projects },
-  };
+  if (res.ok)
+    return {
+      props: { projects },
+    };
 }
 
 //className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:w-full"
