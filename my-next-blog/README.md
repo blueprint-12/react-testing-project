@@ -2,14 +2,14 @@
 > tailwind CSS, NextJS, notion api를 활용한 블로그
 
 **기간**: 11월 8 ~ 13일, 2022
-# 📚사용 패키지
+## # 사용 패키지
 
 - next 12.2.2
 - react 18.2.0
 - dotenv 16.0.3 (로컬 환경 변수 관리용)
 - tailwindcss 3.2.2
 
-## 업데이트
+## # 업데이트
 
 **DATE**: <i>2022 11 12</i>
 
@@ -34,9 +34,12 @@
 - autoprefixer v10.4.13
 - postcss v8.4.18
 
-# 설정 관련 정보
+### # 이슈
+- [vercel 배포 과정: 프리렌더 시, deafult props undefined](https://github.com/blueprint-12/react-testing-project/issues/1)
 
-### ✅ **notion API**
+### # 설정 관련 정보
+
+#### ✅ **notion API**
 
 - 생성한 데이터베이스를 전체화면으로 열기(open as full page) 한 다음에 나오는 url의 아이디값을 넣어줘야 한다.
   > ?물음표 뒤에 붙은 쿼리값은 get요청을 보낼 때, 오류를 발생시키므로 그 앞의 값만 사용
@@ -48,7 +51,7 @@
   > 데이터를 sorting(정렬)할 수 있는데 body에 json 형식으로 넘겨주면 된다. 이 코드는 노션dev API 공홈에 있다.
   > [Notion dev sorting](https://developers.notion.com/reference/post-database-query-sort)
 
-### ✅ **테일윈드**
+#### ✅ **테일윈드**
 
 (config 파일은 항상 root에)
 
@@ -96,6 +99,6 @@ module.exports = {
 1. "tailwind css intelisense" 추가
 2. "tailwind css highlught" 추가 (세팅에서 borderRadius 0.25rem(defualt) -> 0 으로 변경)
 
-# Next rules
+### etc: Next 규칙
 
 - 이미지 리소스(e.g. 파비콘, 로티 파일)->public폴더
