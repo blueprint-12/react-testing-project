@@ -1,8 +1,15 @@
 # my-next-blog
 > tailwind CSS, NextJS, notion api를 활용한 블로그
 
-**기간**: 11월 8 ~ 13일, 2022
-## # 사용 패키지
+**기간**: `11월 8 ~ 13일`, 2022
+
+## # 목차
+1. [사용 라이브러리](#-사용-라이브러리)
+2. [업데이트 내역](#-업데이트)
+3. [해결 이슈](#-해결-이슈)
+4. [라이브러리 세팅](#-라이브러리-세팅)
+   
+## # 사용 라이브러리
 
 - next 12.2.2
 - react 18.2.0
@@ -34,10 +41,10 @@
 - autoprefixer v10.4.13
 - postcss v8.4.18
 
-### # 이슈
+## # 해결 이슈
 - [vercel 배포 과정: 프리렌더 시, deafult props undefined](https://github.com/blueprint-12/react-testing-project/issues/1)
 
-### # 설정 관련 정보
+## # 라이브러리 세팅
 
 #### ✅ **notion API**
 
