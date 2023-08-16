@@ -1,8 +1,8 @@
 # my-next-blog
 > tailwind CSS, NextJS, notion api를 활용한 블로그
 
-**기간**: `11월 8 ~ 13일`, 2022
-
+**기간**: `11월 8 ~ 13일`, 2022 <br/>
+**배포 사이트**: [넥스트 블로그 바로가기](https://my-next-blog-theta.vercel.app/)
 ## # 목차
 1. [사용 라이브러리](#-사용-라이브러리)
 2. [업데이트 내역](#-업데이트)
